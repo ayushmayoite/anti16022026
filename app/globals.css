@@ -1,0 +1,603 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: "Assistant", "Arial", sans-serif;
+  --font-serif: "Crimson Pro", "Times New Roman", serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: #BF0D17;
+  --color-primary-foreground: #ffffff;
+
+  --color-accent: #BF0D17;
+  --color-accent-foreground: #ffffff;
+
+  --color-cta: #000000;
+  --color-cta-foreground: #ffffff;
+
+  --color-muted: #f4f4f5;
+  --color-muted-foreground: #71717a;
+
+  --color-card: #ffffff;
+  --color-card-foreground: #18181b;
+
+  --color-popover: #ffffff;
+  --color-popover-foreground: #18181b;
+
+  --color-border: #e4e4e7;
+  --color-input: #e4e4e7;
+  --color-ring: #BF0D17;
+
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
+
+  --color-secondary: #F7F7F7;
+  --color-secondary-foreground: #292929;
+
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-200: #e5e5e5;
+  --color-neutral-300: #d4d4d4;
+  --color-neutral-400: #a3a3a3;
+  --color-neutral-500: #737373;
+  --color-neutral-600: #525252;
+  --color-neutral-700: #404040;
+  --color-neutral-800: #262626;
+  --color-neutral-900: #171717;
+  --color-neutral-950: #0a0a0a;
+
+  --color-amber-500: #BF0D17;
+  --color-amber-600: #BF0D17;
+  --color-amber-700: #9A0A12;
+
+  --radius: 0rem;
+}
+
+:root {
+  --background: #F7F6F5;
+  --foreground: #292929;
+  --f-button-width: 40px;
+  --f-button-height: 40px;
+  --f-button-border: 0;
+  --f-button-border-radius: 0;
+  --f-button-color: #374151;
+  --f-button-bg: #f8f8f8;
+  --f-button-hover-bg: #e0e0e0;
+  --f-button-active-bg: #d0d0d0;
+  --f-button-shadow: none;
+  --f-button-transition: all 0.15s ease;
+  --f-button-transform: none;
+  --f-button-svg-width: 20px;
+  --f-button-svg-height: 20px;
+  --f-button-svg-stroke-width: 1.5;
+  --f-button-svg-fill: none;
+  --f-button-svg-filter: none;
+  --f-button-svg-disabled-opacity: 0.65;
+  --f-spinner-width: 36px;
+  --f-spinner-height: 36px;
+  --f-spinner-color-1: rgba(0, 0, 0, 0.1);
+  --f-spinner-color-2: rgba(17, 24, 28, 0.8);
+  --f-spinner-stroke: 2.75;
+  --swiper-theme-color: #007aff;
+  --bs-breakpoint-xs: 0;
+  --bs-breakpoint-sm: 576px;
+  --bs-breakpoint-md: 768px;
+  --bs-breakpoint-lg: 992px;
+  --bs-breakpoint-xl: 1200px;
+  --bs-breakpoint-xxl: 1680px;
+  --page-bar-h: 55px;
+  --type-margin: 16px;
+  --wrapper-p: 40px;
+  --body-font-size: 14px;
+  --masonry-tile-h-unit: 26px;
+  --bs-blue: #0d6efd;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #E3000F;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #E3000F;
+  --bs-teal: #20c997;
+  --bs-cyan: #0dcaf0;
+  --bs-black: #000;
+  --bs-white: #fff;
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
+  --bs-gray-100: #f8f9fa;
+  --bs-gray-200: #e9ecef;
+  --bs-gray-300: #dee2e6;
+  --bs-gray-400: #ced4da;
+  --bs-gray-500: #adb5bd;
+  --bs-gray-600: #6c757d;
+  --bs-gray-700: #495057;
+  --bs-gray-800: #343a40;
+  --bs-gray-900: #212529;
+  --bs-primary: #E3000F;
+  --bs-secondary: #F7F7F7;
+  --bs-light: #F7F6F5;
+  --bs-dark: #292929;
+  --bs-primary-rgb: 227, 0, 15;
+  --bs-secondary-rgb: 247, 247, 247;
+  --bs-light-rgb: 247, 246, 245;
+  --bs-dark-rgb: 41, 41, 41;
+  --bs-primary-text-emphasis: #540000;
+  --bs-secondary-text-emphasis: #004418;
+  --bs-success-text-emphasis: #004418;
+  --bs-info-text-emphasis: #055160;
+  --bs-warning-text-emphasis: #664d03;
+  --bs-danger-text-emphasis: #540000;
+  --bs-light-text-emphasis: #495057;
+  --bs-dark-text-emphasis: #495057;
+  --bs-primary-bg-subtle: #f6cccc;
+  --bs-secondary-bg-subtle: #cceed8;
+  --bs-success-bg-subtle: #cceed8;
+  --bs-info-bg-subtle: #cff4fc;
+  --bs-warning-bg-subtle: #fff3cd;
+  --bs-danger-bg-subtle: #f6cccc;
+  --bs-light-bg-subtle: #fcfcfd;
+  --bs-dark-bg-subtle: #ced4da;
+  --bs-primary-border-subtle: #ed9999;
+  --bs-secondary-border-subtle: #99ddb1;
+
+  --line-height-tight: 1.1;
+  --line-height-snug: 1.3;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.7;
+}
+
+@media (min-width: 576px) {
+  :root {
+    --masonry-tile-h-unit: calc(540px / 12);
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --masonry-tile-h-unit: calc(720px / 12);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply antialiased scroll-smooth;
+    font-size: 16px;
+    scroll-padding-top: var(--page-bar-h);
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    line-height: var(--line-height-relaxed);
+  }
+
+  /* Explicitly reset form elements to sans-serif to prevent heading inheritance */
+  label,
+  input,
+  textarea,
+  select,
+  button {
+    @apply font-sans;
+  }
+
+  /* WINI uses serif for editorial headings */
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-foreground;
+    font-weight: 300;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+
+  h1 {
+    @apply text-3xl md:text-5xl lg:text-[4.5rem];
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 300;
+    color: #BF0D17;
+    line-height: 1.1;
+  }
+
+  h2 {
+    @apply text-3xl md:text-5xl lg:text-[4.5rem];
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 300;
+    color: #BF0D17;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl;
+    font-weight: 300;
+  }
+
+  h4 {
+    @apply text-lg md:text-xl;
+    font-weight: 300;
+  }
+
+  p {
+    @apply text-base md:text-lg;
+    color: #555555;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .container-wide {
+    @apply max-w-[1600px] mx-auto px-6 md:px-12;
+  }
+
+  .container-narrow {
+    @apply max-w-[800px] mx-auto px-6;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .masonry {
+    display: block;
+    width: 100%;
+    margin-right: calc(var(--masonry-gutter) * -1);
+    margin-left: calc(var(--masonry-gutter) * -1);
+    --masonry-gutter: 5px;
+  }
+
+  .masonry__body {
+    column-count: 1;
+    column-gap: 0;
+  }
+
+  .masonry-item {
+    break-inside: avoid;
+    width: 100%;
+    display: inline-block;
+  }
+
+  .masonry-tile {
+    padding: var(--masonry-gutter);
+  }
+
+  .masonry-tile-1 {
+    height: calc(var(--masonry-tile-h-unit) * 1);
+  }
+
+  .masonry-tile-2 {
+    height: calc(var(--masonry-tile-h-unit) * 2);
+  }
+
+  .masonry-tile-3 {
+    height: calc(var(--masonry-tile-h-unit) * 3);
+  }
+
+  .masonry-tile-4 {
+    height: calc(var(--masonry-tile-h-unit) * 4);
+  }
+
+  .masonry-tile-5 {
+    height: calc(var(--masonry-tile-h-unit) * 5);
+  }
+
+  .masonry-tile-6 {
+    height: calc(var(--masonry-tile-h-unit) * 6);
+  }
+
+  .masonry-tile-7 {
+    height: calc(var(--masonry-tile-h-unit) * 7);
+  }
+
+  .masonry-tile-8 {
+    height: calc(var(--masonry-tile-h-unit) * 8);
+  }
+
+  .masonry-tile-9 {
+    height: calc(var(--masonry-tile-h-unit) * 9);
+  }
+
+  .masonry-tile-10 {
+    height: calc(var(--masonry-tile-h-unit) * 10);
+  }
+
+  .masonry-tile-11 {
+    height: calc(var(--masonry-tile-h-unit) * 11);
+  }
+
+  .masonry-tile-12 {
+    height: calc(var(--masonry-tile-h-unit) * 12);
+  }
+
+  @media (min-width: 576px) {
+    .masonry__body {
+      column-count: 2;
+    }
+
+    .masonry-tile-sm-1 {
+      height: calc(var(--masonry-tile-h-unit) * 1);
+    }
+
+    .masonry-tile-sm-2 {
+      height: calc(var(--masonry-tile-h-unit) * 2);
+    }
+
+    .masonry-tile-sm-3 {
+      height: calc(var(--masonry-tile-h-unit) * 3);
+    }
+
+    .masonry-tile-sm-4 {
+      height: calc(var(--masonry-tile-h-unit) * 4);
+    }
+
+    .masonry-tile-sm-5 {
+      height: calc(var(--masonry-tile-h-unit) * 5);
+    }
+
+    .masonry-tile-sm-6 {
+      height: calc(var(--masonry-tile-h-unit) * 6);
+    }
+
+    .masonry-tile-sm-7 {
+      height: calc(var(--masonry-tile-h-unit) * 7);
+    }
+
+    .masonry-tile-sm-8 {
+      height: calc(var(--masonry-tile-h-unit) * 8);
+    }
+
+    .masonry-tile-sm-9 {
+      height: calc(var(--masonry-tile-h-unit) * 9);
+    }
+
+    .masonry-tile-sm-10 {
+      height: calc(var(--masonry-tile-h-unit) * 10);
+    }
+
+    .masonry-tile-sm-11 {
+      height: calc(var(--masonry-tile-h-unit) * 11);
+    }
+
+    .masonry-tile-sm-12 {
+      height: calc(var(--masonry-tile-h-unit) * 12);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .masonry-tile-md-1 {
+      height: calc(var(--masonry-tile-h-unit) * 1);
+    }
+
+    .masonry-tile-md-2 {
+      height: calc(var(--masonry-tile-h-unit) * 2);
+    }
+
+    .masonry-tile-md-3 {
+      height: calc(var(--masonry-tile-h-unit) * 3);
+    }
+
+    .masonry-tile-md-4 {
+      height: calc(var(--masonry-tile-h-unit) * 4);
+    }
+
+    .masonry-tile-md-5 {
+      height: calc(var(--masonry-tile-h-unit) * 5);
+    }
+
+    .masonry-tile-md-6 {
+      height: calc(var(--masonry-tile-h-unit) * 6);
+    }
+
+    .masonry-tile-md-7 {
+      height: calc(var(--masonry-tile-h-unit) * 7);
+    }
+
+    .masonry-tile-md-8 {
+      height: calc(var(--masonry-tile-h-unit) * 8);
+    }
+
+    .masonry-tile-md-9 {
+      height: calc(var(--masonry-tile-h-unit) * 9);
+    }
+
+    .masonry-tile-md-10 {
+      height: calc(var(--masonry-tile-h-unit) * 10);
+    }
+
+    .masonry-tile-md-11 {
+      height: calc(var(--masonry-tile-h-unit) * 11);
+    }
+
+    .masonry-tile-md-12 {
+      height: calc(var(--masonry-tile-h-unit) * 12);
+    }
+  }
+
+  @media (min-width: 992px) {
+    .masonry__body {
+      column-count: 3;
+    }
+
+    .masonry-tile-lg-1 {
+      height: calc(var(--masonry-tile-h-unit) * 1);
+    }
+
+    .masonry-tile-lg-2 {
+      height: calc(var(--masonry-tile-h-unit) * 2);
+    }
+
+    .masonry-tile-lg-3 {
+      height: calc(var(--masonry-tile-h-unit) * 3);
+    }
+
+    .masonry-tile-lg-4 {
+      height: calc(var(--masonry-tile-h-unit) * 4);
+    }
+
+    .masonry-tile-lg-5 {
+      height: calc(var(--masonry-tile-h-unit) * 5);
+    }
+
+    .masonry-tile-lg-6 {
+      height: calc(var(--masonry-tile-h-unit) * 6);
+    }
+
+    .masonry-tile-lg-7 {
+      height: calc(var(--masonry-tile-h-unit) * 7);
+    }
+
+    .masonry-tile-lg-8 {
+      height: calc(var(--masonry-tile-h-unit) * 8);
+    }
+
+    .masonry-tile-lg-9 {
+      height: calc(var(--masonry-tile-h-unit) * 9);
+    }
+
+    .masonry-tile-lg-10 {
+      height: calc(var(--masonry-tile-h-unit) * 10);
+    }
+
+    .masonry-tile-lg-11 {
+      height: calc(var(--masonry-tile-h-unit) * 11);
+    }
+
+    .masonry-tile-lg-12 {
+      height: calc(var(--masonry-tile-h-unit) * 12);
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .masonry-tile-xl-1 {
+      height: calc(var(--masonry-tile-h-unit) * 1);
+    }
+
+    .masonry-tile-xl-2 {
+      height: calc(var(--masonry-tile-h-unit) * 2);
+    }
+
+    .masonry-tile-xl-3 {
+      height: calc(var(--masonry-tile-h-unit) * 3);
+    }
+
+    .masonry-tile-xl-4 {
+      height: calc(var(--masonry-tile-h-unit) * 4);
+    }
+
+    .masonry-tile-xl-5 {
+      height: calc(var(--masonry-tile-h-unit) * 5);
+    }
+
+    .masonry-tile-xl-6 {
+      height: calc(var(--masonry-tile-h-unit) * 6);
+    }
+
+    .masonry-tile-xl-7 {
+      height: calc(var(--masonry-tile-h-unit) * 7);
+    }
+
+    .masonry-tile-xl-8 {
+      height: calc(var(--masonry-tile-h-unit) * 8);
+    }
+
+    .masonry-tile-xl-9 {
+      height: calc(var(--masonry-tile-h-unit) * 9);
+    }
+
+    .masonry-tile-xl-10 {
+      height: calc(var(--masonry-tile-h-unit) * 10);
+    }
+
+    .masonry-tile-xl-11 {
+      height: calc(var(--masonry-tile-h-unit) * 11);
+    }
+
+    .masonry-tile-xl-12 {
+      height: calc(var(--masonry-tile-h-unit) * 12);
+    }
+  }
+
+  @media (min-width: 1680px) {
+    .masonry-tile-xxl-1 {
+      height: calc(var(--masonry-tile-h-unit) * 1);
+    }
+
+    .masonry-tile-xxl-2 {
+      height: calc(var(--masonry-tile-h-unit) * 2);
+    }
+
+    .masonry-tile-xxl-3 {
+      height: calc(var(--masonry-tile-h-unit) * 3);
+    }
+
+    .masonry-tile-xxl-4 {
+      height: calc(var(--masonry-tile-h-unit) * 4);
+    }
+
+    .masonry-tile-xxl-5 {
+      height: calc(var(--masonry-tile-h-unit) * 5);
+    }
+
+    .masonry-tile-xxl-6 {
+      height: calc(var(--masonry-tile-h-unit) * 6);
+    }
+
+    .masonry-tile-xxl-7 {
+      height: calc(var(--masonry-tile-h-unit) * 7);
+    }
+
+    .masonry-tile-xxl-8 {
+      height: calc(var(--masonry-tile-h-unit) * 8);
+    }
+
+    .masonry-tile-xxl-9 {
+      height: calc(var(--masonry-tile-h-unit) * 9);
+    }
+
+    .masonry-tile-xxl-10 {
+      height: calc(var(--masonry-tile-h-unit) * 10);
+    }
+
+    .masonry-tile-xxl-11 {
+      height: calc(var(--masonry-tile-h-unit) * 11);
+    }
+
+    .masonry-tile-xxl-12 {
+      height: calc(var(--masonry-tile-h-unit) * 12);
+    }
+  }
+
+  .masonry-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

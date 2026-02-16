@@ -1,0 +1,283 @@
+﻿[
+    {
+        "id":  "spino",
+        "desc":  "Spino is crafted for those who prioritize alignment without sacrificing ease. With posture-enhancing features and thoughtful adjustability, it encourages upright sitting while letting you move naturally through the day",
+        "features":  [
+                         " Head Support: The adjustable headrest offers steady upper-back and neck support, making it easier to stay upright without fatigue",
+                         "Adjustable Seat: The seat depth can be tailored to your leg length, promoting even weight distribution and all-day sitting comfort",
+                         "Weight Balance Tilt Mechanism: Spino features a tilt system that encourages micro-movements, helping you stay mobile and supported while working or reclining"
+                     ]
+    },
+    {
+        "id":  "toro",
+        "desc":  "",
+        "features":  [
+
+                     ]
+    },
+    {
+        "id":  "phoenix",
+        "desc":  "Phoenix is designed to energize your workflow with refined support and adaptive comfort. Every detail is engineered to promote a focused, upright experience—whether you\u0026#x27;re deep in thought or on the move.",
+        "features":  [
+                         "Flexible Support Headrest: A responsive headrest adjusts to your preferred height and tilt, offering steady neck support and helping you stay relaxed through every task",
+                         "Adjustable Seat: Customize the seat depth to suit your leg length, enhancing circulation and comfort throughout extended sitting periods",
+                         "Synchro Tilt Mechanism: The synchro tilt system allows the seat and back to move in harmony, encouraging natural posture changes and smooth recline transitions"
+                     ]
+    },
+    {
+        "id":  "fluid",
+        "desc":  "Fluid is designed to keep you in motion without distraction. With intuitive ergonomics and responsive adjustments, it supports your body through every shift in task—offering ease, balance, and lasting comfort",
+        "features":  [
+                         "Ergonomic Support: Engineered with a dynamic back and supportive frame, Fluid promotes natural posture while adapting to your movements",
+                         "Adjustable Seat: Fine-tune seat depth for optimal leg support, enhancing comfort and encouraging better circulation during long hours",
+                         "Auto Weight Sensing Tilt Mechanism: This smart recline system adjusts automatically to your body weight, offering balanced resistance without manual settings"
+                     ]
+    },
+    {
+        "id":  "rock",
+        "desc":  "Rock is built for flexibility—designed to follow your posture, respond to your movements, and keep your body aligned throughout the day. Whether you\u0026#x27;re leaning in or reclining back, Rock adjusts in all the right places.",
+        "features":  [
+                         " Flexible Headrest: The headrest adapts in both height and angle—offering reliable neck support whether you\u0026#x27;re upright or leaning back.",
+                         "Adjustable Backrest Swing: The backrest’s swing function allows a smooth, responsive recline that encourages movement while maintaining balanced support",
+                         " Lumbar Support Adjustment: Fine-tune the lumbar zone to match your lower back curve, providing personalized support where you need it most"
+                     ]
+    },
+    {
+        "id":  "sullion",
+        "desc":  "Sullion blends minimal design with essential ergonomic features to support the way you work. Whether you\u0026#x27;re leaning in or kicking back, it delivers the right balance of structure and softness—keeping you at ease without overcomplication",
+        "features":  [
+                         "Flexible Support: The headrest responds gently to your movements, providing consistent support without stiffness or resistance",
+                         "Adjustable Seat: Fine-tune the seat depth to suit your leg length and posture—helping maintain comfort and proper circulation during extended use",
+                         "Synchro Tilt Single Lock Mechanism: The seat and backrest recline together in a synchronized motion, encouraging movement while keeping you well-balanced at every angle"
+                     ]
+    },
+    {
+        "id":  "sway",
+        "desc":  "Sway is crafted for those who thrive on fluidity and focus. Its agile design empowers seamless transitions between tasks, offering dependable ease and elegant responsiveness. More than just a chair—it’s a rhythm partner for your workday.",
+        "features":  [
+                         "Weight Balance Tilt Mechanism: This self-adjusting tilt function senses your body weight and distributes resistance evenly, offering fluid recline that supports your every lean without manual effort",
+                         "Adjustable Seat: Tailor the seat’s depth to match your frame with a smooth-glide adjustment that enhances leg comfort and supports natural posture from hip to knee",
+                         "Flexible Support: The back structure is designed to bend with your body’s micro-movements, maintaining balanced support while promoting freedom and comfort as you shift throughout the day"
+                     ]
+    },
+    {
+        "id":  "orbit",
+        "desc":  "The Orbit chair combines ergonomic comfort with advanced functionality, featuring a breathable mesh backrest that promotes airflow and keeps you cool during long sitting hours.",
+        "features":  [
+                         "Steady support, everyday comfort. : The fixed armrests provide stable, consistent support for the arms, promoting relaxed posture and dependable comfort throughout the workday.",
+                         "Lean back. Stay supported. : The tilt mechanism feature allows smooth, supportive leaning, adapting naturally to your movement for enhanced comfort during long sitting hours.",
+                         "Stay cool. Sit longer : The breathable mesh back promotes continuous airflow, keeping you cool and comfortable even during extended sitting hours."
+                     ]
+    },
+    {
+        "id":  "revoq",
+        "desc":  "Revoq brings dynamic support to the modern workspace. With fluid adjustability and a responsive build, it encourages better movement, upright posture, and day-long ease—no matter how your workflow shifts.",
+        "features":  [
+                         "Back Support: A responsive back structure flexes gently with your movements, offering consistent support without stiffness or restriction",
+                         "Adjustable Seat: Revoq’s sliding seat allows for leg-length customization, helping improve circulation and reduce lower-body pressure.",
+                         "Synchro Tilt Mechanism: This synchronized recline system lets the seat and backrest move in harmony, encouraging natural posture changes with minimal effort"
+                     ]
+    },
+    {
+        "id":  "breeze",
+        "desc":  "The BREEZ Chair combines a breathable mesh design with ergonomic support to keep you cool and comfortable throughout the workday. Its contoured form promotes proper posture while maintaining a light, modern look.",
+        "features":  [
+                         "Support where your comfort begins. : The adjustable headrest allows precise height and angle positioning to support the neck and head, reducing strain and enhancing comfort during long hours of work.",
+                         "The right height, every time. : The seat height adjustment allows precise positioning to suit different users and desk levels, promoting proper posture and all day comfort with effortless control",
+                         "Moves with you, supports you. : The tilt mechanism enables smooth, controlled recline that supports natural movement and maintains proper posture for enhanced comfort throughout the day."
+                     ]
+    },
+    {
+        "id":  "x-mesh",
+        "desc":  "The X Mess chair is crafted for ultimate comfort with a high quality PU moulded cushion and support that enhances posture and reduces strain.",
+        "features":  [
+                         "Recline smart. Stay comfortable. : The Tilt back mechanism offers smooth, controlled tilting that adapts to your movement, providing continuous support and relaxed comfort throughout the workday.",
+                         "Cool comfort, built to breathe. : The breathable mesh and designer X-back enhances airflow and flexibility, keeping you cool while providing comfortable, supportive seating throughout long work hours.",
+                         "Arms that move with you: The adjustable armrests allow flexible positioning to support natural arm movement, reducing strain and enhancing comfort during long work hours."
+                     ]
+    },
+    {
+        "id":  "fluid-x-2",
+        "desc":  "Fluid X is built for those who need their chair to keep up. With smooth adjustability and responsive features, it follows your posture—not the other way around—offering comfort that adapts with you from the first task to the last",
+        "features":  [
+                         "Weight Balance Tilt Mechanism: This mechanism adjusts to your body weight in real-time, delivering smooth recline with balanced resistance—no extra controls needed",
+                         "Adjustable Seat: Slide the seat forward or backward to match your leg length, creating a stable base for healthier, more comfortable sitting",
+                         "Flexible Headrest: Easily adjust the headrest height and tilt for steady neck support—ideal for extended periods of concentration or relaxation"
+                     ]
+    },
+    {
+        "id":  "arvo",
+        "desc":  "Arvo celebrates the beauty of solid hardwood through precise craftsmanship and balanced proportions. Its clean structure highlights authenticity and warm materiality, bringing a naturally refined presence to any café or dining environment.",
+        "features":  [
+
+                     ]
+    },
+    {
+        "id":  "brim",
+        "desc":  "The Brim Chair blends modern aesthetics with practical, everyday comfort. Its smooth, curved backrest provides supportive seating, while the cushioned seat enhances ease during long hours of use.",
+        "features":  [
+
+                     ]
+    },
+    {
+        "id":  "canaret",
+        "desc":  "The Chair brings a clean, classic silhouette to any dining or café setting. Its refined lines and modern detailing create an understated elegance that fits seamlessly into both contemporary and traditional interiors. Designed to feel welcoming, it enhances any space with its balanced, versatile style.",
+        "features":  [
+
+                     ]
+    },
+    {
+        "id":  "caneva",
+        "desc":  "The Caneva blends contemporary clarity with warm, natural materials. Its clean wooden frame pairs beautifully with a woven cane backrest that adds subtle texture. The gentle curve of the back provides comfort while maintaining a light, modern silhouette.",
+        "features":  [
+
+                     ]
+    },
+    {
+        "id":  "caneva-high",
+        "desc":  "The Caneva Café Chair brings a sleek, modern character with its clean lines and thoughtfully contoured form. Designed for comfort, its supportive seat and backrest make it suitable for cafés, collaborative spaces, and casual social zones.",
+        "features":  [
+
+                     ]
+    },
+    {
+        "id":  "copse",
+        "desc":  "The Copse Café Chair is designed with ergonomic support that ensures lasting comfort, whether used at home or in a busy commercial environment. Its gently curved backrest offers excellent posture alignment, making it ideal for long seating periods.",
+        "features":  [
+
+                     ]
+    },
+    {
+        "id":  "dive",
+        "desc":  "The Dive Chair features a sleek, modern profile that adapts effortlessly to cafés, dining rooms, offices, and lounges. Its clean lines and smooth contours give it a versatile look that blends seamlessly with a wide range of interior styles. Designed to feel inviting, it adds a touch of contemporary simplicity to any space.",
+        "features":  [
+
+                     ]
+    },
+    {
+        "id":  "ember",
+        "desc":  "The Ember Café Chair is defined by its clean lines, sculpted form, and timeless materiality. Crafted from solid hardwood, it showcases an angular silhouette that blends strength with visual lightness. Its open frame backrest adds an airy, inviting feel suited for modern café environments.",
+        "features":  [
+
+                     ]
+    },
+    {
+        "id":  "flare",
+        "desc":  "The Flare Café Chair embodies sleek minimalism with its clean, modern silhouette. Its contoured seat offers comfortable support, while the ventilated backrest enhances airflow for a cooler sitting experience. Designed with subtle elegance, it fits effortlessly into contemporary café and dining settings.",
+        "features":  [
+
+                     ]
+    },
+    {
+        "id":  "flip",
+        "desc":  "Flip Training Chairs feature a breathable mesh back and cushioned seat for cool, long lasting comfort. The ergonomic design supports proper posture, boosting focus during training sessions.",
+        "features":  [
+
+                     ]
+    },
+    {
+        "id":  "fusion",
+        "desc":  "The Fusion High Café Chair features a slightly curved high backrest designed to offer thorough lumbar support, ensuring a comfortable seating experience even for long durations. Its sleek, contemporary form makes it a standout piece in café settings, bars, and modern interiors.",
+        "features":  [
+
+                     ]
+    },
+    {
+        "id":  "fynn",
+        "desc":  "The Fynn High Café Chair blends natural warmth with clean, modern precision through its solid wood base and upholstered seat. Its balanced proportions and supportive backrest make it a comfortable choice for cafés, collaborative zones, and social spaces.",
+        "features":  [
+
+                     ]
+    },
+    {
+        "id":  "grace",
+        "desc":  "Crafted with premium leather upholstery, this ergonomic chair delivers a refined balance of luxury and comfort. Its smooth, contoured surfaces offer a plush seating experience while elevating the visual language of modern executive spaces.",
+        "features":  [
+
+                     ]
+    },
+    {
+        "id":  "leaf",
+        "desc":  "The Leaf Café Chair features a distinctive wing shaped silhouette that adds a refined and stylish touch to any setting. Its graceful, sculpted form brings a sense of sophistication while blending effortlessly into cafés, dining rooms, lounges, and workspaces. Designed to elevate interiors, it offers both visual appeal and everyday practicality.",
+        "features":  [
+
+                     ]
+    },
+    {
+        "id":  "lexus",
+        "desc":  "The Lexus Café Chair brings together timeless design and contemporary appeal with its refined, wing inspired silhouette. Its smooth, sculpted form adds character to cafés, dining areas, and social spaces. Blending tradition with modern aesthetics, it stands out as both elegant and versatile.",
+        "features":  [
+
+                     ]
+    },
+    {
+        "id":  "lisbo",
+        "desc":  "Built with ergonomic support in mind, the Lisbo High Café Chair offers a comfortable seating experience ideal for long durations. Its supportive structure makes it perfect for high counters, workspaces, and social settings.",
+        "features":  [
+
+                     ]
+    },
+    {
+        "id":  "moonlight",
+        "desc":  "Defined by clean lines and a softly contoured form, this premium leather chair brings understated sophistication to contemporary offices. The seamless upholstery and refined proportions create a calm, confident visual presence",
+        "features":  [
+
+                     ]
+    },
+    {
+        "id":  "nordic",
+        "desc":  "The Nordic Cafe Chair features clean lines and a beautifully sculpted form that showcases timeless wooden craftsmanship. Its angular silhouette paired with an open-frame backrest creates a perfect balance of strength and lightness.",
+        "features":  [
+
+                     ]
+    },
+    {
+        "id":  "pinnacle",
+        "desc":  "This premium leather ergonomic chair is crafted to bring sophistication and authority to executive spaces. Rich upholstery, plush cushioning, and refined contours create a commanding presence without compromising on comfort.",
+        "features":  [
+
+                     ]
+    },
+    {
+        "id":  "rider",
+        "desc":  "This premium leather ergonomic chair features a gracefully sculpted profile with layered cushioning that enhances both visual depth and seating comfort. Its refined form adds warmth and authority to modern leadership environments.",
+        "features":  [
+
+                     ]
+    },
+    {
+        "id":  "rio",
+        "desc":  "The Rio Chair combines clean, contemporary contours with a light, easy presence. Its open style backrest creates a sense of space while maintaining a crisp, modern profile ideal for cafés and dining areas. Designed with thoughtful proportions, it blends visual simplicity with practical style.",
+        "features":  [
+
+                     ]
+    },
+    {
+        "id":  "smile",
+        "desc":  "The Chair brings a warm, inviting presence to any café or dining setting with its clean, contemporary lines. Designed with a supportive backrest, it maintains a balanced silhouette that enhances both comfort and style.",
+        "features":  [
+
+                     ]
+    },
+    {
+        "id":  "snap",
+        "desc":  "Snap Training Chairs combine minimal elegance with durable design, blending effortlessly into any modern workspace. Clean, functional, and comfortable—they enhance any setting without compromising support.",
+        "features":  [
+
+                     ]
+    },
+    {
+        "id":  "wing",
+        "desc":  "",
+        "features":  [
+
+                     ]
+    },
+    {
+        "id":  "zilo",
+        "desc":  "The Zilo Café Chair reflects modern simplicity with its clean, confident form. Its ergonomically shaped seat offers comfortable support, making it suitable for long hours of use. Designed with contemporary appeal, it blends seamlessly into café, dining, and social environments.",
+        "features":  [
+
+                     ]
+    }
+]

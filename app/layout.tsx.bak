@@ -1,0 +1,40 @@
+import type { Metadata } from "next";
+import { Plus_Jakarta_Sans, Inter } from "next/font/google";
+import "./globals.css";
+import { WhatsAppCTA } from "@/components/ui/WhatsAppCTA";
+
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-heading",
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-body",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: "One and Only Furniture | Premium Office Solutions",
+  description:
+    "Simplicity & Functionality. Modular office furniture for modern workspaces.",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body
+        className={`${plusJakarta.variable} ${inter.variable} antialiased bg-background text-foreground font-body`}
+      >
+        {children}
+        <WhatsAppCTA />
+      </body>
+    </html>
+  );
+}

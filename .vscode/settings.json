@@ -1,0 +1,52 @@
+{
+    "amazonQ.suppressPrompts": {
+        "createCredentialsProfile": true,
+        "codeWhispererNewWelcomeMessage": true,
+        "codeWhispererConnectionExpired": true,
+        "amazonQWelcomePage": true,
+        "amazonQSessionConfigurationMessage": true,
+        "minIdeVersion": true,
+        "ssoCacheError": true,
+        "amazonQLspManifestMessage": true,
+        "amazonQWorkspaceLspManifestMessage": true,
+        "amazonQChatDisclaimer": true,
+        "amazonQChatPairProgramming": true,
+        "amazonQSelectDeveloperProfile": true
+    },
+    "aws.suppressPrompts": {
+        "apprunnerNotifyPricing": true,
+        "apprunnerNotifyPause": true,
+        "ecsRunCommand": true,
+        "ecsRunCommandEnable": true,
+        "ecsRunCommandDisable": true,
+        "regionAddAutomatically": true,
+        "yamlExtPrompt": true,
+        "fileViewerEdit": true,
+        "createCredentialsProfile": true,
+        "samcliConfirmDevStack": true,
+        "remoteConnected": true,
+        "codeCatalystConnectionExpired": true,
+        "minIdeVersion": true,
+        "ssoCacheError": true
+    },
+    "workbench.editor.enablePreviewFromQuickOpen": true,
+    "editor.defaultFormatter": "amazonwebservices.amazon-q-vscode",
+    "editor.defaultFoldingRangeProvider": "amazonwebservices.amazon-q-vscode",
+    "notebook.defaultFormatter": "amazonwebservices.amazon-q-vscode",
+    "amazonQ.telemetry": false,
+    "chat.tools.terminal.autoReplyToPrompts": true,
+    "git.branchProtectionPrompt": "alwaysCommit",
+    "git.promptToSaveFilesBeforeCommit": "never",
+    "git.promptToSaveFilesBeforeStash": "never",
+    "typescript.enablePromptUseWorkspaceTsdk": false,
+    "python.testing.promptToConfigure": false,
+    "editor.unusualLineTerminators": "off",
+    "workbench.cloudChanges.continueOn": "off",
+    "terminal.integrated.shellIntegration.environmentReporting": true,
+    "python.createEnvironment.trigger": "off",
+    "javascript.updateImportsOnFileMove.enabled": "never",
+    "typescript.updateImportsOnFileMove.enabled": "never",
+    "[prompt]": {
+        "editor.unusualLineTerminators": "off"
+    }
+}
