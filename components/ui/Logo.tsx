@@ -10,7 +10,7 @@ interface LogoProps {
 
 export function OneAndOnlyLogo({ className, variant = "orange" }: LogoProps) {
   return (
-    <div className={cn("relative w-auto", className)}>
+    <div className={cn("relative w-auto h-auto", className)}>
       {variant === "orange" ? (
         // Blue logo for scrolled state
         <Image
@@ -18,7 +18,7 @@ export function OneAndOnlyLogo({ className, variant = "orange" }: LogoProps) {
           alt="One and Only Furniture"
           width={240}
           height={80}
-          className="h-full w-auto object-contain"
+          className="h-auto w-auto object-contain"
           priority
         />
       ) : (
@@ -28,7 +28,7 @@ export function OneAndOnlyLogo({ className, variant = "orange" }: LogoProps) {
           alt="One and Only Furniture"
           width={240}
           height={80}
-          className="h-full w-auto object-contain grayscale brightness-0 invert-[0.9] opacity-90"
+          className="h-auto w-auto object-contain grayscale brightness-0 invert-[0.9] opacity-90"
           priority
           key="white-logo"
         />
