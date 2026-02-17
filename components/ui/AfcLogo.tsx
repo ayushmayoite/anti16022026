@@ -11,7 +11,7 @@ export function AfcLogo({ className }: { className?: string }) {
                 alt="AFC India - Strategic Partner"
                 width={160}
                 height={60}
-                className="object-contain object-left"
+                className="h-full w-auto object-contain object-left"
                 priority
             />
         </div>

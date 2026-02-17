@@ -14,7 +14,8 @@ export function AFCBanner() {
                         alt="AFC India"
                         width={100}
                         height={40}
-                        className="object-contain shrink-0 w-auto h-auto"
+                        className="object-contain shrink-0"
+                        style={{ width: 'auto', height: 'auto' }}
                     />
 
                     {/* Divider */}
