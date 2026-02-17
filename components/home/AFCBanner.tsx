@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 
 export function AFCBanner() {
@@ -9,13 +8,13 @@ export function AFCBanner() {
             <div className="container mx-auto px-6 lg:px-12">
                 <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-14">
                     {/* Logo — fixed size, no global style interference */}
-                    <Image
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
                         src="/afc-logo.svg"
                         alt="AFC India"
                         width={100}
                         height={40}
                         className="object-contain shrink-0"
-                        style={{ width: 'auto', height: 'auto' }}
                     />
 
                     {/* Divider */}
