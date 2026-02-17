@@ -13,7 +13,10 @@ export type LayoutType =
     | "private-cabins"
     | "hybrid-mix";
 
+export type ProductLine = "deskpro" | "linear" | "60x30" | "custom" | "";
+
 export interface ConfigState {
+    productLine: ProductLine;
     furnitureType: FurnitureType;
     seatingType: SeatingType;
     seatingCount: number;
@@ -53,6 +56,7 @@ const ConfiguratorContext = createContext<ConfigContextType | undefined>(
 );
 
 const initialState: ConfigState = {
+    productLine: "",
     furnitureType: "desking",
     seatingType: "shared",
     seatingCount: 4,
@@ -89,6 +93,7 @@ export function ConfiguratorProvider({ children }: { children: ReactNode }) {
 
     const getSummary = () => {
         const lines = [
+            `Product Line: ${config.productLine || "Not selected"}`,
             `Furniture Type: ${config.furnitureType}`,
             `Seating Configuration: ${config.seatingType} ${config.seatingCount}-seater`,
             `Return Partition: ${config.hasReturnPartition ? "Yes" : "No"}`,

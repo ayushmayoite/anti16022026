@@ -29,7 +29,7 @@ export function SummaryPanel() {
     };
 
     return (
-        <div className="p-6 lg:p-8 space-y-4">
+        <div className="summary-panel p-6 lg:p-8 space-y-4">
             <div className="flex items-center justify-between">
                 <h3 className="text-lg font-medium">Summary</h3>
                 <button

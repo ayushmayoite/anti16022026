@@ -8,36 +8,37 @@ import { SummaryPanel } from "./SummaryPanel";
 
 export function ConfiguratorLayout() {
     return (
-        <div className="min-h-screen bg-white">
-            <div className="grid lg:grid-cols-[1.2fr_1fr] gap-0">
-                {/* Left Panel - Preview (Sticky) */}
-                <div className="relative lg:sticky lg:top-24 h-screen lg:h-[calc(100vh-6rem)] bg-neutral-50 flex items-center justify-center p-8 lg:p-12">
-                    <ConfiguratorPreview />
-                </div>
-
-                {/* Right Panel - Controls (Scrollable) */}
+        <div className="min-h-screen bg-background">
+            {/* Mobile: Stacked layout, Desktop: Side-by-side */}
+            <div className="lg:grid lg:grid-cols-[1fr_500px] xl:grid-cols-[1fr_600px] lg:gap-0">
+                {/* Left Panel - Controls (Scrollable on both mobile and desktop) */}
                 <div className="bg-white">
-                    <div className="p-6 lg:p-12 space-y-8">
-                        <div className="space-y-4">
-                            <p className="text-xs tracking-[0.3em] uppercase text-neutral-400">
-                                Modular Furniture
+                    <div className="container-wide py-8 lg:py-16 space-y-12">
+                        <div className="space-y-6">
+                            <p className="text-xs tracking-[0.3em] uppercase text-neutral-500 font-sans">
+                                Build Your Workspace
                             </p>
-                            <h1 className="text-3xl md:text-4xl font-light">
-                                Configurator
+                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-light italic text-primary">
+                                Workstation Configurator
                             </h1>
-                            <p className="text-neutral-600">
-                                Build your custom workstation with our step-by-step
-                                configurator. Select from shared or non-shared seating,
-                                partition options, finishes, and accessories.
+                            <p className="text-neutral-600 text-lg leading-relaxed max-w-2xl">
+                                Explore modular office furniture tailored to your needs. Configure layouts, finishes, and accessories to create the perfect workspace.
                             </p>
                         </div>
 
                         <ConfiguratorSteps />
                     </div>
 
-                    {/* Sticky Summary Panel */}
-                    <div className="lg:sticky lg:bottom-0 bg-white border-t border-neutral-200">
+                    {/* Summary Panel - Bottom of controls */}
+                    <div className="border-t border-neutral-200 bg-neutral-50">
                         <SummaryPanel />
+                    </div>
+                </div>
+
+                {/* Right Panel - Preview (Hidden on mobile, Sticky on desktop) */}
+                <div className="hidden lg:block lg:sticky lg:top-0 lg:h-screen bg-neutral-100 border-l border-neutral-200">
+                    <div className="h-full flex items-center justify-center p-12">
+                        <ConfiguratorPreview />
                     </div>
                 </div>
             </div>

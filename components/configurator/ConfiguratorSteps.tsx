@@ -1,8 +1,40 @@
 "use client";
 
 import React from "react";
-import { useConfigurator, LayoutType } from "./ConfiguratorContext";
+import { useConfigurator, LayoutType, ProductLine } from "./ConfiguratorContext";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
+
+const productLineOptions: { value: ProductLine; label: string; description: string; useCase: string; image: string }[] = [
+    { 
+        value: "deskpro", 
+        label: "DeskPro System", 
+        description: "Modular workstations with integrated privacy screens and cable management",
+        useCase: "Open offices with defined privacy needs",
+        image: "/products/deskpro-workstation-1.jpg"
+    },
+    { 
+        value: "linear", 
+        label: "Linear Workstation", 
+        description: "Open collaborative benching with clean lines and shared infrastructure",
+        useCase: "High-density collaborative teams",
+        image: "/products/linear-workstation-1.jpg"
+    },
+    { 
+        value: "60x30", 
+        label: "60x30 Modular", 
+        description: "High partition cubicle system for semi-private focused work",
+        useCase: "IT teams, call centers, private workspaces",
+        image: "/products/60x30-workstation-1.jpg"
+    },
+    { 
+        value: "custom", 
+        label: "Custom Solutions", 
+        description: "Tailored workspace systems for unique requirements",
+        useCase: "Large corporate projects, specialized needs",
+        image: "/products/tcs-workspace-1.jpg"
+    },
+];
 
 const layoutOptions: { value: LayoutType; label: string; description: string }[] = [
     { value: "linear", label: "Linear Bench", description: "Straight desk arrangement" },
@@ -36,49 +68,132 @@ export function ConfiguratorSteps() {
     const { config, updateConfig, currentStep, setCurrentStep } = useConfigurator();
 
     const steps = [
-        { id: 0, title: "Furniture Type", complete: !!config.furnitureType },
-        { id: 1, title: "Seating", complete: config.seatingCount > 0 },
-        { id: 2, title: "Layout", complete: !!config.layout },
-        { id: 3, title: "Partitions", complete: config.partitionHeight !== "" },
-        { id: 4, title: "Finishes", complete: !!config.topFinish },
-        { id: 5, title: "Accessories", complete: config.accessories.length > 0 },
+        { id: 0, title: "Product Line", complete: !!config.productLine },
+        { id: 1, title: "Furniture Type", complete: !!config.furnitureType },
+        { id: 2, title: "Seating", complete: config.seatingCount > 0 },
+        { id: 3, title: "Layout", complete: !!config.layout },
+        { id: 4, title: "Partitions", complete: config.partitionHeight !== "" },
+        { id: 5, title: "Finishes", complete: !!config.topFinish },
+        { id: 6, title: "Accessories", complete: config.accessories.length > 0 },
     ];
 
     return (
         <div className="space-y-8">
-            {/* Step Indicator */}
-            <div className="flex items-center gap-2 overflow-x-auto pb-2">
-                {steps.map((step, index) => (
-                    <button
-                        key={step.id}
-                        onClick={() => setCurrentStep(step.id)}
-                        className={cn(
-                            "flex-shrink-0 px-4 py-2 text-sm font-medium transition-colors border",
-                            currentStep === step.id
-                                ? "bg-primary text-white border-primary"
-                                : step.complete
-                                    ? "bg-neutral-100 text-neutral-900 border-neutral-200"
-                                    : "bg-white text-neutral-600 border-neutral-200 hover:border-neutral-300"
-                        )}
-                    >
-                        {index + 1}. {step.title}
-                    </button>
-                ))}
+            {/* Step Progress Indicator */}
+            <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                    <p className="text-sm text-neutral-600">
+                        Step {currentStep + 1} of {steps.length}
+                    </p>
+                    <div className="flex items-center gap-2">
+                        {steps.map((step) => (
+                            <button
+                                key={step.id}
+                                onClick={() => step.complete || step.id === currentStep ? setCurrentStep(step.id) : null}
+                                disabled={!step.complete && step.id !== currentStep}
+                                className={cn(
+                                    "w-2 h-2 rounded-full transition-all",
+                                    currentStep === step.id
+                                        ? "bg-primary w-8"
+                                        : step.complete
+                                            ? "bg-neutral-400 hover:bg-primary cursor-pointer"
+                                            : "bg-neutral-200 cursor-not-allowed"
+                                )}
+                                aria-label={`${step.complete ? 'Go to' : ''} ${step.title}`}
+                            />
+                        ))}
+                    </div>
+                </div>
+                
+                {/* Step breadcrumb for clarity */}
+                <div className="flex flex-wrap items-center gap-2 text-sm">
+                    {steps.slice(0, currentStep + 1).map((step, index) => (
+                        <React.Fragment key={step.id}>
+                            {index > 0 && <span className="text-neutral-300">/</span>}
+                            <button
+                                onClick={() => step.complete || step.id === currentStep ? setCurrentStep(step.id) : null}
+                                disabled={!step.complete && step.id !== currentStep}
+                                className={cn(
+                                    "transition-colors",
+                                    currentStep === step.id
+                                        ? "text-primary font-medium"
+                                        : step.complete
+                                            ? "text-neutral-600 hover:text-primary"
+                                            : "text-neutral-400 cursor-not-allowed"
+                                )}
+                            >
+                                {step.title}
+                            </button>
+                        </React.Fragment>
+                    ))}
+                </div>
             </div>
 
             {/* Step Content */}
             <div className="border border-neutral-200 p-6 lg:p-8 min-h-[400px]">
                 {currentStep === 0 && (
+                    <div className="space-y-8">
+                        <div>
+                            <h2 className="text-3xl font-serif font-light italic text-primary mb-3">
+                                Choose Your Workspace System
+                            </h2>
+                            <p className="text-neutral-600 leading-relaxed">
+                                Each system is designed for specific workplace needs. Select the one that best matches your requirements.
+                            </p>
+                        </div>
+                        <div className="grid md:grid-cols-2 gap-6">
+                            {productLineOptions.map((line) => (
+                                <button
+                                    key={line.value}
+                                    onClick={() => updateConfig({ productLine: line.value })}
+                                    className={cn(
+                                        "group relative overflow-hidden border-2 text-left transition-all hover:shadow-xl",
+                                        config.productLine === line.value
+                                            ? "border-primary bg-primary/5"
+                                            : "border-neutral-200 hover:border-neutral-300"
+                                    )}
+                                >
+                                    {/* Product Image */}
+                                    <div className="relative h-48 bg-neutral-100 overflow-hidden">
+                                        <Image
+                                            src={line.image}
+                                            alt={line.label}
+                                            fill
+                                            className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                                        <div className="absolute bottom-4 left-4 right-4">
+                                            <h3 className="text-xl font-medium text-white">{line.label}</h3>
+                                        </div>
+                                    </div>
+                                    {/* Product Info */}
+                                    <div className="p-6 space-y-3">
+                                        <p className="text-sm text-neutral-600 leading-relaxed">
+                                            {line.description}
+                                        </p>
+                                        <div className="pt-2 border-t border-neutral-200">
+                                            <p className="text-xs uppercase tracking-wide text-neutral-500 mb-1">
+                                                Best For
+                                            </p>
+                                            <p className="text-sm font-medium text-neutral-900">
+                                                {line.useCase}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+                )}
+
+                {currentStep === 1 && (
                     <div className="space-y-6">
                         <h2 className="text-2xl font-light">Select Furniture Type</h2>
                         <div className="grid md:grid-cols-3 gap-4">
                             {(["desking", "cabin", "meeting"] as const).map((type) => (
                                 <button
                                     key={type}
-                                    onClick={() => {
-                                        updateConfig({ furnitureType: type });
-                                        setCurrentStep(1);
-                                    }}
+                                    onClick={() => updateConfig({ furnitureType: type })}
                                     className={cn(
                                         "p-6 border-2 text-left transition-all hover:shadow-md",
                                         config.furnitureType === type
@@ -100,7 +215,7 @@ export function ConfiguratorSteps() {
                     </div>
                 )}
 
-                {currentStep === 1 && (
+                {currentStep === 2 && (
                     <div className="space-y-6">
                         <h2 className="text-2xl font-light">Seating Configuration</h2>
                         <div className="grid md:grid-cols-2 gap-6">
@@ -150,7 +265,7 @@ export function ConfiguratorSteps() {
                             </div>
                         </div>
                         <button
-                            onClick={() => setCurrentStep(2)}
+                            onClick={() => setCurrentStep(3)}
                             className="bg-primary text-white px-6 py-3 hover:bg-primary/90 transition-colors"
                         >
                             Next Step
@@ -158,17 +273,14 @@ export function ConfiguratorSteps() {
                     </div>
                 )}
 
-                {currentStep === 2 && (
+                {currentStep === 3 && (
                     <div className="space-y-6">
                         <h2 className="text-2xl font-light">Choose Layout</h2>
                         <div className="grid md:grid-cols-2 gap-4">
                             {layoutOptions.map((option) => (
                                 <button
                                     key={option.value}
-                                    onClick={() => {
-                                        updateConfig({ layout: option.value });
-                                        setCurrentStep(3);
-                                    }}
+                                    onClick={() => updateConfig({ layout: option.value })}
                                     className={cn(
                                         "p-6 border-2 text-left transition-all hover:shadow-md",
                                         config.layout === option.value
@@ -184,7 +296,7 @@ export function ConfiguratorSteps() {
                     </div>
                 )}
 
-                {currentStep === 3 && (
+                {currentStep === 4 && (
                     <div className="space-y-6">
                         <h2 className="text-2xl font-light">Partition Options</h2>
                         <div className="grid md:grid-cols-2 gap-6">
@@ -205,7 +317,7 @@ export function ConfiguratorSteps() {
                             </div>
                         </div>
                         <button
-                            onClick={() => setCurrentStep(4)}
+                            onClick={() => setCurrentStep(5)}
                             className="bg-primary text-white px-6 py-3 hover:bg-primary/90 transition-colors"
                         >
                             Next Step
@@ -213,7 +325,7 @@ export function ConfiguratorSteps() {
                     </div>
                 )}
 
-                {currentStep === 4 && (
+                {currentStep === 5 && (
                     <div className="space-y-6">
                         <h2 className="text-2xl font-light">Select Finishes</h2>
                         <div>
@@ -252,7 +364,7 @@ export function ConfiguratorSteps() {
                             </div>
                         </div>
                         <button
-                            onClick={() => setCurrentStep(5)}
+                            onClick={() => setCurrentStep(6)}
                             className="bg-primary text-white px-6 py-3 hover:bg-primary/90 transition-colors"
                         >
                             Next Step
@@ -260,7 +372,7 @@ export function ConfiguratorSteps() {
                     </div>
                 )}
 
-                {currentStep === 5 && (
+                {currentStep === 6 && (
                     <div className="space-y-6">
                         <h2 className="text-2xl font-light">Accessories & Add-ons</h2>
                         <div>
@@ -302,23 +414,37 @@ export function ConfiguratorSteps() {
                 )}
             </div>
 
-            {/* Navigation */}
-            <div className="flex justify-between">
+            {/* Navigation - Always visible */}
+            <div className="flex items-center justify-between gap-4 pt-8 border-t border-neutral-200">
                 <button
                     onClick={() => setCurrentStep(Math.max(0, currentStep - 1))}
                     disabled={currentStep === 0}
-                    className="px-6 py-3 border border-neutral-300 text-neutral-700 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-neutral-50"
+                    className="px-8 py-3 border-2 border-neutral-300 text-neutral-700 font-medium disabled:opacity-30 disabled:cursor-not-allowed hover:bg-neutral-50 hover:border-neutral-400 transition-all"
                 >
-                    Previous
+                    Back
                 </button>
-                {currentStep < 5 && (
-                    <button
-                        onClick={() => setCurrentStep(currentStep + 1)}
-                        className="px-6 py-3 bg-neutral-900 text-white hover:bg-neutral-800"
-                    >
-                        Skip to Next
-                    </button>
-                )}
+                
+                <div className="flex items-center gap-3">
+                    {currentStep < steps.length - 1 && (
+                        <button
+                            onClick={() => setCurrentStep(currentStep + 1)}
+                            className="px-8 py-3 bg-primary text-white font-medium hover:bg-primary/90 transition-all shadow-sm hover:shadow-md"
+                        >
+                            {steps[currentStep].complete ? 'Next Step' : 'Skip'}
+                        </button>
+                    )}
+                    {currentStep === steps.length - 1 && (
+                        <button
+                            onClick={() => {
+                                // Scroll to summary panel
+                                document.querySelector('.summary-panel')?.scrollIntoView({ behavior: 'smooth' });
+                            }}
+                            className="px-8 py-3 bg-primary text-white font-medium hover:bg-primary/90 transition-all shadow-sm hover:shadow-md"
+                        >
+                            View Summary
+                        </button>
+                    )}
+                </div>
             </div>
         </div>
     );
