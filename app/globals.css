@@ -262,21 +262,21 @@
     /* rgb(33, 37, 41) */
   }
 
-  /* Navigation Links (Assistant, 24px, 600 weight) */
+  /* Navigation Links (Assistant, 14px, 400 weight) — Wini.de style */
   .nav-link,
   nav a {
     font-family: var(--font-sans);
-    font-weight: 600;
-    font-size: 24px;
+    font-weight: 400;
+    font-size: 14px;
     line-height: 1.4;
   }
 
-  /* Buttons (Assistant, 20px, 500 weight) */
+  /* Buttons (Assistant, 14px, 500 weight) — Wini.de style */
   .btn,
   button {
     font-family: var(--font-sans);
     font-weight: 500;
-    font-size: 20px;
+    font-size: 14px;
     line-height: 1.3;
   }
 }

@@ -123,16 +123,16 @@ export function Navbar() {
               >
                 <button
                   className={cn(
-                    "flex items-center gap-1.5 text-2xl font-semibold transition-colors duration-200 py-2",
+                    "flex items-center gap-1 text-sm font-normal tracking-wide transition-colors duration-200 py-2",
                     activeMegaMenu === key
                       ? "text-[#BF0D17]"
-                      : "text-neutral-800 hover:text-[#BF0D17]"
+                      : "text-neutral-700 hover:text-[#BF0D17]"
                   )}
                 >
                   {section.title}
                   <ChevronDown
                     className={cn(
-                      "w-3.5 h-3.5 transition-transform duration-300",
+                      "w-3 h-3 transition-transform duration-300",
                       activeMegaMenu === key ? "rotate-180 text-[#BF0D17]" : "text-neutral-400"
                     )}
                   />
@@ -147,7 +147,7 @@ export function Navbar() {
                       : "opacity-0 translate-y-2 invisible pointer-events-none"
                   )}
                 >
-                  <div className={`bg-white shadow-[0_20px_40px_-5px_rgba(0,0,0,0.08)] border border-neutral-100 p-10 rounded-sm grid gap-12 ${section.columns.length <= 2 ? 'grid-cols-2' : 'grid-cols-4'}`}>
+                  <div className={`bg-white shadow-[0_20px_40px_-5px_rgba(0,0,0,0.08)] border border-neutral-100 p-10 grid gap-12 ${section.columns.length <= 2 ? 'grid-cols-2' : 'grid-cols-4'}`}>
                     {section.columns.map((col, idx) => (
                       <div key={idx} className="space-y-6">
                         <h4 className="text-xs font-semibold text-neutral-400 uppercase tracking-widest">
@@ -173,33 +173,24 @@ export function Navbar() {
             ))}
 
             <Link
-              href="/projects"
-              className={cn(
-                "text-2xl font-semibold tracking-wide transition-colors duration-300 relative group",
-                scrolled ? "text-neutral-900" : "text-neutral-900"
-              )}
+              href="/gallery"
+              className="text-sm font-normal tracking-wide text-neutral-700 hover:text-[#BF0D17] transition-colors duration-200"
             >
-              <span className="relative z-10 group-hover:text-[#BF0D17] transition-colors">Projects</span>
+              Projects
             </Link>
 
             <Link
               href="/about"
-              className={cn(
-                "text-2xl font-semibold tracking-wide transition-colors duration-300 group",
-                scrolled ? "text-neutral-900" : "text-neutral-900"
-              )}
+              className="text-sm font-normal tracking-wide text-neutral-700 hover:text-[#BF0D17] transition-colors duration-200"
             >
-              <span className="relative z-10 group-hover:text-[#BF0D17] transition-colors">About</span>
+              About
             </Link>
 
             <Link
               href="/contact"
-              className={cn(
-                "text-2xl font-semibold tracking-wide transition-colors duration-300 group",
-                scrolled ? "text-neutral-900" : "text-neutral-900"
-              )}
+              className="text-sm font-normal tracking-wide text-neutral-700 hover:text-[#BF0D17] transition-colors duration-200"
             >
-              <span className="relative z-10 group-hover:text-[#BF0D17] transition-colors">Contact</span>
+              Contact
             </Link>
           </nav>
 
@@ -215,7 +206,7 @@ export function Navbar() {
             <div className="hidden md:flex items-center gap-4 pl-6 border-l border-neutral-200">
               <Link
                 href="/contact"
-                className="group flex items-center gap-2 bg-[#BF0D17] text-white text-[14px] font-medium px-6 py-2.5 rounded-full hover:bg-[#c5000d] transition-colors duration-200"
+                className="group flex items-center gap-2 bg-[#BF0D17] text-white text-sm font-medium px-6 py-2.5 hover:bg-[#9A0A12] transition-colors duration-200"
               >
                 <span>Request Quote</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
