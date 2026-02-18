@@ -27,7 +27,7 @@ interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
  * Line-height: 1.25 (tight)
  */
 export const H1: React.FC<HeadingProps> = ({ children, className = '', ...props }) => (
-  <h1 className={`font-serif text-5xl md:text-6xl font-normal tracking-tighter leading-tight ${className}`} {...props}>
+  <h1 className={`tracking-tighter leading-tight ${className}`} {...props}>
     {children}
   </h1>
 );
@@ -41,7 +41,7 @@ export const H1: React.FC<HeadingProps> = ({ children, className = '', ...props 
  * Line-height: 1.25 (tight)
  */
 export const H2: React.FC<HeadingProps> = ({ children, className = '', ...props }) => (
-  <h2 className={`font-serif text-4xl md:text-5xl font-normal tracking-tight leading-tight ${className}`} {...props}>
+  <h2 className={`tracking-tight leading-tight ${className}`} {...props}>
     {children}
   </h2>
 );
@@ -55,7 +55,7 @@ export const H2: React.FC<HeadingProps> = ({ children, className = '', ...props 
  * Line-height: 1.375 (snug)
  */
 export const H3: React.FC<HeadingProps> = ({ children, className = '', ...props }) => (
-  <h3 className={`font-serif text-3xl md:text-4xl font-normal tracking-tight leading-snug ${className}`} {...props}>
+  <h3 className={`tracking-tight leading-snug ${className}`} {...props}>
     {children}
   </h3>
 );
@@ -69,7 +69,7 @@ export const H3: React.FC<HeadingProps> = ({ children, className = '', ...props 
  * Line-height: 1.375 (snug)
  */
 export const H4: React.FC<HeadingProps> = ({ children, className = '', ...props }) => (
-  <h4 className={`font-sans text-2xl md:text-3xl font-medium tracking-tight leading-snug ${className}`} {...props}>
+  <h4 className={`tracking-tight leading-snug ${className}`} {...props}>
     {children}
   </h4>
 );
@@ -83,7 +83,7 @@ export const H4: React.FC<HeadingProps> = ({ children, className = '', ...props 
  * Line-height: 1.375 (snug)
  */
 export const H5: React.FC<HeadingProps> = ({ children, className = '', ...props }) => (
-  <h5 className={`font-sans text-xl md:text-2xl font-medium tracking-normal leading-snug ${className}`} {...props}>
+  <h5 className={`tracking-normal leading-snug ${className}`} {...props}>
     {children}
   </h5>
 );
@@ -97,7 +97,7 @@ export const H5: React.FC<HeadingProps> = ({ children, className = '', ...props 
  * Line-height: 1.5 (normal)
  */
 export const H6: React.FC<HeadingProps> = ({ children, className = '', ...props }) => (
-  <h6 className={`font-sans text-lg md:text-xl font-semibold tracking-normal leading-normal ${className}`} {...props}>
+  <h6 className={`tracking-normal leading-normal ${className}`} {...props}>
     {children}
   </h6>
 );

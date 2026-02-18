@@ -33,7 +33,7 @@ export function Footer() {
     <footer className="bg-[#F5F5F5] border-t border-neutral-200">
       <div className="container mx-auto px-6 lg:px-12 pt-16 pb-8">
         {/* WINI-style italic red heading */}
-        <h3 className="font-serif italic text-2xl md:text-3xl text-[#BF0D17] mb-12">
+        <h3 className="text-2xl md:text-3xl text-[#BF0D17] mb-12">
           Follow us!
         </h3>
 

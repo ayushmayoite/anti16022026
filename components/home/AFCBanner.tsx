@@ -25,7 +25,7 @@ export function AFCBanner() {
                         <span className="block font-medium tracking-wide text-neutral-800 mb-1">
                             Official Strategic Partner
                         </span>
-                        <span className="block font-sans text-sm text-neutral-400 mb-0">
+                        <span className="block text-sm text-neutral-400 mb-0">
                             Exclusive partnership for premium office solutions in India
                         </span>
                     </div>

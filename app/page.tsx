@@ -17,7 +17,7 @@ export default function Home() {
       <JsonLd data={organizationSchema} />
       <JsonLd data={websiteSchema} />
 
-      <div className="min-h-screen flex flex-col font-sans relative">
+      <div className="min-h-screen flex flex-col relative">
         <Navbar />
         <main className="flex-1">
           {/* 1. Hero - Full-bleed image + overlapping card */}

@@ -1,9 +1,6 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: "Assistant", "Arial", sans-serif;
-  --font-serif: "Crimson Pro", "Times New Roman", serif;
-
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 

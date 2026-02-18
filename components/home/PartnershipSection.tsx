@@ -34,16 +34,16 @@ export function PartnershipSection() {
               Strategic Partnership
             </span>
           </div>
-          
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-8 leading-tight">
+
+          <h2 className="text-white mb-8 leading-tight">
             Authorized Franchise Partner <br className="hidden md:block" />
             of <span className="text-amber-500">AFC India</span>
           </h2>
-          
+
           <p className="text-lg md:text-xl text-neutral-300 mb-12 max-w-2xl mx-auto leading-relaxed">
             Delivering industrial-scale modular furniture solutions with world-class manufacturing infrastructure and localized expertise.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <Link
               href="/about"

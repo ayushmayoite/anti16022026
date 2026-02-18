@@ -182,12 +182,12 @@ export default function ContactPage() {
 
               {/* Contact Info */}
               <div className="lg:pl-12">
-                <span className="block font-sans text-lg font-semibold text-neutral-900 mb-8">Contact Information</span>
+                <span className="block text-lg font-semibold text-neutral-900 mb-8">Contact Information</span>
                 <div className="space-y-8">
                   <div className="flex gap-4">
                     <MapPin className="w-5 h-5 text-neutral-400 mt-1" />
                     <div>
-                      <span className="block font-sans text-base font-semibold text-neutral-800 mb-1">Address</span>
+                      <span className="block text-base font-semibold text-neutral-800 mb-1">Address</span>
                       <p className="text-neutral-600">
                         Patna, Bihar, India
                       </p>
@@ -196,14 +196,14 @@ export default function ContactPage() {
                   <div className="flex gap-4">
                     <Phone className="w-5 h-5 text-neutral-400 mt-1" />
                     <div>
-                      <span className="block font-sans text-base font-semibold text-neutral-800 mb-1">Phone</span>
+                      <span className="block text-base font-semibold text-neutral-800 mb-1">Phone</span>
                       <p className="text-neutral-600">+91 90310 22875</p>
                     </div>
                   </div>
                   <div className="flex gap-4">
                     <Mail className="w-5 h-5 text-neutral-400 mt-1" />
                     <div>
-                      <span className="block font-sans text-base font-semibold text-neutral-800 mb-1">Email</span>
+                      <span className="block text-base font-semibold text-neutral-800 mb-1">Email</span>
                       <p className="text-neutral-600">sales@oando.co.in</p>
                     </div>
                   </div>

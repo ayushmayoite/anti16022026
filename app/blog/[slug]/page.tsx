@@ -137,7 +137,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   }
 
   return (
-    <div className="min-h-screen flex flex-col font-sans bg-background">
+    <div className="min-h-screen flex flex-col bg-background">
       <Navbar />
 
       <main className="flex-1 pt-24 pb-20">
@@ -153,108 +153,108 @@ export default async function BlogPostPage({ params }: PageProps) {
         </section>
         <section className="container mx-auto px-6 max-w-4xl py-16 lg:py-24">
           <article>
-          {/* Header */}
-          <div className="mb-8">
-            <div className="flex items-center gap-3 text-sm text-muted-foreground mb-4">
-              <span className="text-primary font-medium">{post.category}</span>
-              <span>•</span>
-              <span>{post.date}</span>
-              <span>•</span>
-              <span>{post.readTime}</span>
+            {/* Header */}
+            <div className="mb-8">
+              <div className="flex items-center gap-3 text-sm text-muted-foreground mb-4">
+                <span className="text-primary font-medium">{post.category}</span>
+                <span>•</span>
+                <span>{post.date}</span>
+                <span>•</span>
+                <span>{post.readTime}</span>
+              </div>
+              <h1 className="mb-6">
+                {post.title}
+              </h1>
+              <p className="text-muted-foreground">By {post.author}</p>
             </div>
-            <h1 className="text-4xl md:text-5xl font-serif font-medium mb-6">
-              {post.title}
-            </h1>
-            <p className="text-muted-foreground">By {post.author}</p>
-          </div>
 
-          {/* Featured Image */}
-          <div className="rounded-2xl overflow-hidden mb-12">
-            <img
-              src={post.image}
-              alt={post.title}
-              className="w-full aspect-video object-cover"
-            />
-          </div>
+            {/* Featured Image */}
+            <div className="rounded-2xl overflow-hidden mb-12">
+              <img
+                src={post.image}
+                alt={post.title}
+                className="w-full aspect-video object-cover"
+              />
+            </div>
 
-          {/* Content */}
-          <div className="prose prose-lg dark:prose-invert max-w-none">
-            {post.content.split("\n").map((paragraph, i) => {
-              if (paragraph.startsWith("## ")) {
-                return (
-                  <h2
-                    key={i}
-                    className="text-2xl font-serif font-medium mt-8 mb-4"
-                  >
-                    {paragraph.replace("## ", "")}
-                  </h2>
-                );
-              }
-              if (paragraph.startsWith("### ")) {
-                return (
-                  <h3 key={i} className="text-xl font-medium mt-6 mb-3">
-                    {paragraph.replace("### ", "")}
-                  </h3>
-                );
-              }
-              if (paragraph.startsWith("- ")) {
-                return (
-                  <li key={i} className="ml-6 text-muted-foreground">
-                    {paragraph.replace("- ", "")}
-                  </li>
-                );
-              }
-              if (
-                paragraph.startsWith("1. ") ||
-                paragraph.startsWith("2. ") ||
-                paragraph.startsWith("3. ") ||
-                paragraph.startsWith("4. ")
-              ) {
-                return (
-                  <li
-                    key={i}
-                    className="ml-6 text-muted-foreground list-decimal"
-                  >
-                    {paragraph.substring(3)}
-                  </li>
-                );
-              }
-              if (paragraph.trim()) {
-                return (
-                  <p
-                    key={i}
-                    className="text-muted-foreground leading-relaxed mb-4"
-                  >
-                    {paragraph}
-                  </p>
-                );
-              }
-              return null;
-            })}
-          </div>
+            {/* Content */}
+            <div className="prose prose-lg dark:prose-invert max-w-none">
+              {post.content.split("\n").map((paragraph, i) => {
+                if (paragraph.startsWith("## ")) {
+                  return (
+                    <h2
+                      key={i}
+                      className="text-2xl mt-8 mb-4"
+                    >
+                      {paragraph.replace("## ", "")}
+                    </h2>
+                  );
+                }
+                if (paragraph.startsWith("### ")) {
+                  return (
+                    <h3 key={i} className="text-xl font-medium mt-6 mb-3">
+                      {paragraph.replace("### ", "")}
+                    </h3>
+                  );
+                }
+                if (paragraph.startsWith("- ")) {
+                  return (
+                    <li key={i} className="ml-6 text-muted-foreground">
+                      {paragraph.replace("- ", "")}
+                    </li>
+                  );
+                }
+                if (
+                  paragraph.startsWith("1. ") ||
+                  paragraph.startsWith("2. ") ||
+                  paragraph.startsWith("3. ") ||
+                  paragraph.startsWith("4. ")
+                ) {
+                  return (
+                    <li
+                      key={i}
+                      className="ml-6 text-muted-foreground list-decimal"
+                    >
+                      {paragraph.substring(3)}
+                    </li>
+                  );
+                }
+                if (paragraph.trim()) {
+                  return (
+                    <p
+                      key={i}
+                      className="text-muted-foreground leading-relaxed mb-4"
+                    >
+                      {paragraph}
+                    </p>
+                  );
+                }
+                return null;
+              })}
+            </div>
 
-          {/* CTA */}
-          <div className="mt-16 p-8 bg-secondary/20 rounded-2xl text-center">
-            <h3 className="text-2xl font-medium mb-4">
-              Ready to Transform Your Workspace?
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              Get expert advice from our design team.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-block bg-primary text-primary-foreground px-8 py-3 rounded-lg font-medium hover:opacity-90"
-            >
-              Contact Us
-            </Link>
-          </div>
+            {/* CTA */}
+            <div className="mt-16 p-8 bg-secondary/20 rounded-2xl text-center">
+              <h3 className="text-2xl font-medium mb-4">
+                Ready to Transform Your Workspace?
+              </h3>
+              <p className="text-muted-foreground mb-6">
+                Get expert advice from our design team.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-block bg-primary text-primary-foreground px-8 py-3 rounded-lg font-medium hover:opacity-90"
+              >
+                Contact Us
+              </Link>
+            </div>
 
-          {/* Back Link */}
-          <div className="mt-12">
-            <Link href="/blog" className="text-primary hover:underline">
-              ← Back to Blog
-            </Link>
-          </div>
+            {/* Back Link */}
+            <div className="mt-12">
+              <Link href="/blog" className="text-primary hover:underline">
+                ← Back to Blog
+              </Link>
+            </div>
           </article>
         </section>
       </main>

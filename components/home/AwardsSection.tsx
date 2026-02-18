@@ -54,7 +54,7 @@ export function AwardsSection() {
             <div className="container mx-auto px-6 lg:px-12">
                 <div className="mb-16 max-w-2xl">
 
-                    <h2 className="mb-6 font-serif italic text-[#BF0D17]">
+                    <h2 className="mb-6 text-[#BF0D17]">
                         Selected works
                     </h2>
                     <p className="text-base text-neutral-600 max-w-lg">
