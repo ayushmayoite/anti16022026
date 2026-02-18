@@ -221,7 +221,7 @@ export function ProductCatalog({ initialCategory }: ProductCatalogProps) {
             <h1 className="text-white mb-6 max-w-2xl">
               {currentCategory.title}
             </h1>
-            <p className="text-lg md:text-xl text-white/70 max-w-xl mb-0 font-light">
+            <p className="text-lg md:text-xl text-white/70 max-w-xl mb-0">
               {currentCategory.tagline}
             </p>
           </div>

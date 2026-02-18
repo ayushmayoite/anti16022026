@@ -123,7 +123,7 @@ export function Navbar() {
               >
                 <button
                   className={cn(
-                    "flex items-center gap-1.5 text-[14px] font-medium transition-colors duration-200 py-2",
+                    "flex items-center gap-1.5 text-2xl font-semibold transition-colors duration-200 py-2",
                     activeMegaMenu === key
                       ? "text-[#BF0D17]"
                       : "text-neutral-800 hover:text-[#BF0D17]"
@@ -175,7 +175,7 @@ export function Navbar() {
             <Link
               href="/projects"
               className={cn(
-                "text-[15px] font-medium tracking-wide transition-colors duration-300 relative group",
+                "text-2xl font-semibold tracking-wide transition-colors duration-300 relative group",
                 scrolled ? "text-neutral-900" : "text-neutral-900"
               )}
             >
@@ -185,7 +185,7 @@ export function Navbar() {
             <Link
               href="/about"
               className={cn(
-                "text-[15px] font-medium tracking-wide transition-colors duration-300 group",
+                "text-2xl font-semibold tracking-wide transition-colors duration-300 group",
                 scrolled ? "text-neutral-900" : "text-neutral-900"
               )}
             >
@@ -195,7 +195,7 @@ export function Navbar() {
             <Link
               href="/contact"
               className={cn(
-                "text-[15px] font-medium tracking-wide transition-colors duration-300 group",
+                "text-2xl font-semibold tracking-wide transition-colors duration-300 group",
                 scrolled ? "text-neutral-900" : "text-neutral-900"
               )}
             >

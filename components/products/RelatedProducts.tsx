@@ -14,7 +14,7 @@ export function RelatedProducts({ currentProduct }: RelatedProductsProps) {
   const related = products
     .filter(p => p.category === currentProduct.category && p.id !== currentProduct.id)
     .slice(0, 4);
-    
+
   // Fallback if less than 4
   if (related.length < 4) {
     const others = products
@@ -28,12 +28,12 @@ export function RelatedProducts({ currentProduct }: RelatedProductsProps) {
   return (
     <section className="bg-neutral-50 py-16">
       <div className="container mx-auto px-6 lg:px-12">
-        <h2 className="text-2xl font-bold mb-8 text-neutral-900">Compare Similar Products</h2>
-        
+        <h2 className="mb-8 text-neutral-900">Compare Similar Products</h2>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {related.map((idx) => (
-            <Link 
-              key={idx.id} 
+            <Link
+              key={idx.id}
               href={`/products/${idx.slug}`}
               className="group bg-white rounded-lg overflow-hidden border border-neutral-100 hover:border-neutral-200 transition-all hover:shadow-lg"
             >

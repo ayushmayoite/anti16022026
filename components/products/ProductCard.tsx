@@ -42,7 +42,7 @@ export function ProductCard({ product }: ProductCardProps) {
         <span className="text-[10px] font-bold uppercase tracking-widest text-neutral-400">
           {product.category}
         </span>
-        <h3 className="text-xl font-light text-neutral-900 group-hover:text-[#BF0D17] transition-colors duration-300">
+        <h3 className="group-hover:text-[#BF0D17] transition-colors duration-300">
           {product.name}
         </h3>
 

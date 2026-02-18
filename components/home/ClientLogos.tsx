@@ -35,7 +35,7 @@ export function ClientLogos() {
           <p className="text-[11px] tracking-[0.25em] uppercase text-neutral-400 mb-4">
             Why choose us
           </p>
-          <h2 className="text-3xl md:text-4xl font-serif italic text-[#BF0D17] leading-tight">
+          <h2 className="leading-tight">
             We have the answers.
           </h2>
         </div>

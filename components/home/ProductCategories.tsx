@@ -47,7 +47,7 @@ export function ProductCategories() {
     <section className="py-24 md:py-32 bg-white">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="mb-16">
-          <h2 className="mb-6">
+          <h2>
             Discover office furniture
           </h2>
           <p className="text-base text-neutral-600 max-w-xl">

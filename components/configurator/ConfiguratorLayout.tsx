@@ -22,7 +22,7 @@ export function ConfiguratorLayout() {
                             <p className="text-xs tracking-[0.3em] uppercase text-neutral-400">
                                 Modular Furniture
                             </p>
-                            <h1 className="text-3xl md:text-4xl font-light">
+                            <h1>
                                 Configurator
                             </h1>
                             <p className="text-neutral-600">

@@ -39,11 +39,11 @@ export function FilterSidebar({
   activeFilters,
   onFilterChange,
 }: FilterSidebarProps) {
-  
-  const hasActiveFilters = 
-    activeFilters.headrest !== "any" || 
-    activeFilters.priceMin !== undefined || 
-    activeFilters.priceMax !== undefined || 
+
+  const hasActiveFilters =
+    activeFilters.headrest !== "any" ||
+    activeFilters.priceMin !== undefined ||
+    activeFilters.priceMax !== undefined ||
     (activeFilters.colors && activeFilters.colors.length > 0);
 
   const clearAll = () => {
@@ -65,7 +65,7 @@ export function FilterSidebar({
     <div className="space-y-10">
       {/* Categories Section */}
       <div>
-        <h3 className="text-xs font-bold text-neutral-400 uppercase tracking-widest mb-6">
+        <h3 className="text-xs uppercase tracking-widest mb-6">
           Category
         </h3>
         <div className="space-y-1">
@@ -92,7 +92,7 @@ export function FilterSidebar({
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <h3 className="text-xs font-bold text-neutral-400 uppercase tracking-widest mb-6">
+          <h3 className="text-xs uppercase tracking-widest mb-6">
             Headrest
           </h3>
           <div className="flex bg-neutral-100 p-1 rounded-xl">
@@ -120,7 +120,7 @@ export function FilterSidebar({
 
       {/* Price Range */}
       <div>
-        <h3 className="text-xs font-bold text-neutral-400 uppercase tracking-widest mb-6">
+        <h3 className="text-xs uppercase tracking-widest mb-6">
           Price Range
         </h3>
         <div className="grid grid-cols-2 gap-3">
@@ -143,7 +143,7 @@ export function FilterSidebar({
 
       {/* Color Swatches */}
       <div>
-        <h3 className="text-xs font-bold text-neutral-400 uppercase tracking-widest mb-6">
+        <h3 className="text-xs uppercase tracking-widest mb-6">
           Colors
         </h3>
         <div className="flex flex-wrap gap-2">
@@ -162,7 +162,7 @@ export function FilterSidebar({
                 <div className={cn("w-full h-full rounded-full shadow-inner", color.class)} />
                 {isSelected && (
                   <div className="absolute inset-0 flex items-center justify-center">
-                     <div className="w-1.5 h-1.5 rounded-full bg-white mix-blend-difference" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-white mix-blend-difference" />
                   </div>
                 )}
               </button>

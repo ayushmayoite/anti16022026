@@ -37,7 +37,7 @@ export function CaseStudies() {
             <span className="text-sm font-semibold text-amber-600 uppercase tracking-widest mb-2 block">
               Case Studies
             </span>
-            <h2 className="text-4xl md:text-5xl font-medium text-neutral-900 leading-tight">
+            <h2 className="leading-tight">
               Spaces Transformed.
             </h2>
           </div>
@@ -66,12 +66,12 @@ export function CaseStudies() {
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
               </div>
-              
+
               <div className="space-y-1">
                 <p className="text-xs font-semibold uppercase tracking-wider text-neutral-500">
                   {project.category}
                 </p>
-                <h3 className="text-2xl font-medium text-neutral-900 group-hover:text-amber-600 transition-colors">
+                <h3 className="group-hover:text-amber-600 transition-colors">
                   {project.client}
                 </h3>
                 <p className="text-neutral-500">

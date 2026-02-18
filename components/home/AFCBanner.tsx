@@ -22,7 +22,7 @@ export function AFCBanner() {
 
                     {/* Text — explicit font-sans and non-heading tags to avoid global H/p overrides */}
                     <div className="text-center md:text-left">
-                        <span className="block font-sans text-base font-medium tracking-wide text-neutral-800 mb-1">
+                        <span className="block font-medium tracking-wide text-neutral-800 mb-1">
                             Official Strategic Partner
                         </span>
                         <span className="block font-sans text-sm text-neutral-400 mb-0">
@@ -36,7 +36,7 @@ export function AFCBanner() {
                     {/* CTA */}
                     <Link
                         href="/about"
-                        className="font-sans text-sm font-medium text-[#BF0D17] hover:text-[#9A0A12] transition-colors underline underline-offset-4 decoration-[#BF0D17]/30 hover:decoration-[#BF0D17]"
+                        className="text-sm font-medium text-[#BF0D17] hover:text-[#9A0A12] transition-colors underline underline-offset-4 decoration-[#BF0D17]/30 hover:decoration-[#BF0D17]"
                     >
                         Read about our partnership →
                     </Link>
